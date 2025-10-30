@@ -55,11 +55,15 @@ export const TodoInput: React.FC = () => {
         completed: false,
         userId: USER_ID,
       });
+
       setNewTodo('');
       setTimeout(() => inputRef.current?.focus(), 0);
     } catch {
       showNotification(ErrorType.ADD_TODO);
       setIsNewTodoLoading(false);
+      if (inputRef.current) {
+        inputRef.current.disabled = false;
+      }
       setTimeout(() => inputRef.current?.focus(), 0);
       return;
     } finally {
