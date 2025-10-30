@@ -3,5 +3,8 @@ module.exports = {
     '@mate-academy/eslint-config-react-typescript',
     'plugin:cypress/recommended',
   ],
-  rules: {},
+  rules: { '@typescript-eslint/indent': 'off' },
+  settings: {
+    react: { version: 'detect' },
+  },
 };
