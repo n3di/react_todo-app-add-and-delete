@@ -44,9 +44,7 @@ export const TodoItem: React.FC<Props> = ({ todo, isLoading }) => {
     setIsDeleting(false);
   };
 
-  const completedTodoClass = classNames('todo', {
-    completed: completed,
-  });
+  const completedTodoClass = classNames('todo', { completed: completed });
 
   const modalLoaderClass = () => {
     return classNames('modal overlay', {
