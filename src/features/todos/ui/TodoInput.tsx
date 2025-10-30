@@ -42,6 +42,7 @@ export const TodoInput: React.FC = () => {
     if (!title) {
       showNotification(ErrorType.EMPTY_TITLE);
       setTimeout(() => inputRef.current?.focus(), 0);
+
       return;
     }
 

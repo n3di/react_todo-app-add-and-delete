@@ -8,9 +8,13 @@ import React, {
 
 import { ErrorType, Todo, TodoBase } from 'features/todos/model/types';
 
-import { ACTIONS } from 'features/todos/model/actions';
+import { Action, ACTIONS } from 'features/todos/model/actions';
 
-import { initialState, todosReducer, TodosState } from 'features/todos/model/reducer';
+import {
+  initialState,
+  todosReducer,
+  TodosState,
+} from 'features/todos/model/reducer';
 
 import {
   createTodo,
@@ -31,18 +35,18 @@ type TodosContextType = {
   handleToggleTodo: (id: number, completed: boolean) => Promise<void>;
   handleToggleAll: () => Promise<void>;
   deletingTodoIds: number[];
-  dispatch: React.Dispatch<any>;
+  dispatch: React.Dispatch<Action>;
 };
 
 export const TodosContext = createContext<TodosContextType>({
   state: initialState,
   handleAddTodo: async () => {},
-  handleDeleteTodo: async (_id: number) => false,
+  handleDeleteTodo: async () => false,
   handleRenameTodo: async () => {},
   handleToggleTodo: async () => {},
   handleToggleAll: async () => {},
   deletingTodoIds: [],
-  dispatch: () => {},
+  dispatch: () => undefined,
 });
 
 export const TodosProvider = ({ children }: { children: ReactNode }) => {
@@ -92,6 +96,7 @@ export const TodosProvider = ({ children }: { children: ReactNode }) => {
     try {
       await deleteTodo(id);
       dispatch({ type: ACTIONS.DELETE_TODO, payload: { id } });
+
       return true;
     } catch {
       return false;

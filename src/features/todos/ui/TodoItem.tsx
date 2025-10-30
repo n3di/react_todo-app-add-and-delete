@@ -44,7 +44,6 @@ export const TodoItem: React.FC<Props> = ({ todo, isLoading }) => {
     setIsDeleting(false);
   };
 
-
   const completedTodoClass = classNames('todo', {
     completed: completed,
   });

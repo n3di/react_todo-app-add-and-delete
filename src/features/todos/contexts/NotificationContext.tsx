@@ -41,6 +41,7 @@ export const NotificationProvider = ({
       clearTimeout(hideTimerRef.current);
       hideTimerRef.current = null;
     }
+
     if (bumpTimerRef.current) {
       clearTimeout(bumpTimerRef.current);
       bumpTimerRef.current = null;
@@ -89,10 +90,12 @@ export const NotificationProvider = ({
 
 export const useNotification = () => {
   const ctx = useContext(NotificationContext);
+
   if (!ctx) {
     throw new Error(
       'useNotification must be used within a NotificationProvider',
     );
   }
+
   return ctx;
 };
