@@ -19,13 +19,13 @@ export type Action =
   | { type: typeof ACTIONS.SET_TEMP_TODO; payload: Todo | null }
   | { type: typeof ACTIONS.DELETE_TODO; payload: { id: number } }
   | {
-      type: typeof ACTIONS.RENAME_TODO;
-      payload: { id: number; title: string };
-    }
+    type: typeof ACTIONS.RENAME_TODO;
+    payload: { id: number; title: string };
+  }
   | {
-      type: typeof ACTIONS.TOGGLE_TODO;
-      payload: { id: number; completed: boolean };
-    }
+    type: typeof ACTIONS.TOGGLE_TODO;
+    payload: { id: number; completed: boolean };
+  }
   | { type: typeof ACTIONS.TOGGLE_ALL }
   | { type: typeof ACTIONS.SET_FILTER; payload: Filter }
   | { type: typeof ACTIONS.SET_LOADING; payload: boolean }
