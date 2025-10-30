@@ -2,12 +2,7 @@ import './ui/styles/index.scss';
 
 export * from './model/types';
 
-export {
-  USER_ID,
-  getTodos,
-  createTodo,
-  deleteTodo,
-} from './api/todos';
+export { USER_ID, getTodos, createTodo, deleteTodo } from './api/todos';
 
 export { ErrorNotification } from './ui/ErrorNotification';
 export { FilterLink } from './ui/FilterLink';

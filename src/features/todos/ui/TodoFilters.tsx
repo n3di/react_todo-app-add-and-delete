@@ -2,12 +2,7 @@ import React, { useContext, useState } from 'react';
 import { TodosContext } from '../contexts/TodoContext';
 import { useNotification } from '../contexts/NotificationContext';
 import { ACTIONS } from '../model/actions';
-import {
-  ErrorType,
-  Filter,
-  FILTER,
-  FILTER_LINKS,
-} from '../model/types';
+import { ErrorType, Filter, FILTER, FILTER_LINKS } from '../model/types';
 import { FilterLink } from '../ui/FilterLink';
 import { useFocus } from '../contexts/FocusContext';
 

@@ -10,11 +10,7 @@ import { ErrorType, Todo, TodoBase } from '../model/types';
 
 import { Action, ACTIONS } from '../model/actions';
 
-import {
-  initialState,
-  todosReducer,
-  TodosState,
-} from '../model/reducer';
+import { initialState, todosReducer, TodosState } from '../model/reducer';
 
 import {
   createTodo,

@@ -14,17 +14,18 @@ export const TodoInput: React.FC = () => {
 
   const [newTodo, setNewTodo] = useState('');
   const [isNewTodoLoading, setIsNewTodoLoading] = useState(false);
+
   const inputRef = useRef<HTMLInputElement>(null);
 
   useEffect(() => {
     setFocusRef(inputRef);
   }, [setFocusRef]);
 
-  const focusInput = () => {
+  useEffect(() => {
     setTimeout(() => {
       inputRef.current?.focus();
     }, 0);
-  };
+  }, []);
 
   const placeholder = isError
     ? 'Something went wrong... we are sorry!'
@@ -42,12 +43,11 @@ export const TodoInput: React.FC = () => {
     if (!title) {
       showNotification(ErrorType.EMPTY_TITLE);
       setTimeout(() => inputRef.current?.focus(), 0);
-
       return;
     }
 
-    setIsNewTodoLoading(true);
     hideNotification();
+    setIsNewTodoLoading(true);
 
     try {
       await handleAddTodo({
@@ -55,25 +55,17 @@ export const TodoInput: React.FC = () => {
         completed: false,
         userId: USER_ID,
       });
-
       setNewTodo('');
       setTimeout(() => inputRef.current?.focus(), 0);
     } catch {
       showNotification(ErrorType.ADD_TODO);
-
       setIsNewTodoLoading(false);
-
       setTimeout(() => inputRef.current?.focus(), 0);
-
       return;
     } finally {
       setIsNewTodoLoading(false);
     }
   };
-
-  useEffect(() => {
-    focusInput();
-  }, []);
 
   const toggleAllClass = classNames('todoapp__toggle-all', {
     active: todos.length > 0 && todos.every(todo => todo.completed),
