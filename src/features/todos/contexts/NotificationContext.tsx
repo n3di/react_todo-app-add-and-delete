@@ -5,7 +5,7 @@ import React, {
   useRef,
   useState,
 } from 'react';
-import { ErrorType } from 'features/todos/model/types';
+import { ErrorType } from '../model/types';
 
 type NotificationMessage = string | ErrorType;
 

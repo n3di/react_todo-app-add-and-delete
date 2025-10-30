@@ -1,5 +1,5 @@
-import { Todo, TodoBase } from 'features/todos/model/types';
-import { client } from 'shared/api/fetchClient';
+import { Todo, TodoBase } from '../model/types';
+import { client } from '../../../shared/api/fetchClient';
 
 export const USER_ID = 777;
 

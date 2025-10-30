@@ -1,6 +1,6 @@
 import React from 'react';
 import cn from 'classnames';
-import { useNotification } from 'features/todos/contexts/NotificationContext';
+import { useNotification } from '../contexts/NotificationContext';
 
 export const ErrorNotification: React.FC = () => {
   const { message, isVisible, hideNotification } = useNotification();

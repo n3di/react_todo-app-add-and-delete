@@ -1,10 +1,10 @@
 import { useContext, useEffect, useRef, useState } from 'react';
 import classNames from 'classnames';
-import { useNotification } from 'features/todos/contexts/NotificationContext';
-import { TodosContext } from 'features/todos/contexts/TodoContext';
-import { USER_ID } from 'features/todos/api/todos';
-import { useFocus } from 'features/todos/contexts/FocusContext';
-import { ErrorType } from 'features/todos/model/types';
+import { useNotification } from '../contexts/NotificationContext';
+import { TodosContext } from '../contexts/TodoContext';
+import { USER_ID } from '../api/todos';
+import { useFocus } from '../contexts/FocusContext';
+import { ErrorType } from '../model/types';
 
 export const TodoInput: React.FC = () => {
   const { state, handleAddTodo, handleToggleAll } = useContext(TodosContext);

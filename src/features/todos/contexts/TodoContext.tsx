@@ -6,15 +6,15 @@ import React, {
   useState,
 } from 'react';
 
-import { ErrorType, Todo, TodoBase } from 'features/todos/model/types';
+import { ErrorType, Todo, TodoBase } from '../model/types';
 
-import { Action, ACTIONS } from 'features/todos/model/actions';
+import { Action, ACTIONS } from '../model/actions';
 
 import {
   initialState,
   todosReducer,
   TodosState,
-} from 'features/todos/model/reducer';
+} from '../model/reducer';
 
 import {
   createTodo,
@@ -23,9 +23,9 @@ import {
   toggleTodo,
   toggleAll,
   getTodos,
-} from 'features/todos/api/todos';
+} from '../api/todos';
 
-import { useNotification } from 'features/todos/contexts/NotificationContext';
+import { useNotification } from '../contexts/NotificationContext';
 
 type TodosContextType = {
   state: TodosState;

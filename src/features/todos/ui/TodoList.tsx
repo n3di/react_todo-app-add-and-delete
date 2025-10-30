@@ -1,8 +1,8 @@
 import React, { useContext, useMemo } from 'react';
-import { TodosContext } from 'features/todos/contexts/TodoContext';
-import { TodoItem } from 'features/todos/ui/TodoItem';
-import { EditProvider } from 'features/todos/contexts/EditContext';
-import { FILTER } from 'features/todos/model/types';
+import { TodosContext } from '../contexts/TodoContext';
+import { TodoItem } from '../ui/TodoItem';
+import { EditProvider } from '../contexts/EditContext';
+import { FILTER } from '../model/types';
 
 export const TodoList: React.FC = () => {
   const { state, deletingTodoIds } = useContext(TodosContext);

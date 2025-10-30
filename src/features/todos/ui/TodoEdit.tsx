@@ -1,7 +1,7 @@
 import { useContext, useState } from 'react';
-import { TodosContext } from 'features/todos/contexts/TodoContext';
-import { EditContext } from 'features/todos/contexts/EditContext';
-import { ACTIONS } from 'features/todos/model/actions';
+import { TodosContext } from '../contexts/TodoContext';
+import { EditContext } from '../contexts/EditContext';
+import { ACTIONS } from '../model/actions';
 
 type Props = {
   title: string;

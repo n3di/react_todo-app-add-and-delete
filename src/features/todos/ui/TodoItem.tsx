@@ -1,12 +1,12 @@
 import { useContext, useState } from 'react';
 import classNames from 'classnames';
-import { useNotification } from 'features/todos/contexts/NotificationContext';
-import { TodosContext } from 'features/todos/contexts/TodoContext';
-import { EditContext } from 'features/todos/contexts/EditContext';
-import { TodoEdit } from 'features/todos/ui/TodoEdit';
-import { ACTIONS } from 'features/todos/model/actions';
-import { ErrorType, Todo } from 'features/todos/model/types';
-import { useFocus } from 'features/todos/contexts/FocusContext';
+import { useNotification } from '../contexts/NotificationContext';
+import { TodosContext } from '../contexts/TodoContext';
+import { EditContext } from '../contexts/EditContext';
+import { TodoEdit } from '../ui/TodoEdit';
+import { ACTIONS } from '../model/actions';
+import { ErrorType, Todo } from '../model/types';
+import { useFocus } from '../contexts/FocusContext';
 
 type Props = {
   todo: Todo;

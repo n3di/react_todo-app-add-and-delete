@@ -4,12 +4,6 @@
     "src"
   ],
   "compilerOptions": {
-    "baseUrl": "src",
-    "paths": {
-      "app/*": ["app/*"],
-      "features/*": ["features/*"],
-      "shared/*": ["shared/*"]
-    },
     "sourceMap": false,
     "types": ["node", "cypress"]
   }

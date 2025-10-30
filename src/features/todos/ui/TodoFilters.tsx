@@ -1,15 +1,15 @@
 import React, { useContext, useState } from 'react';
-import { TodosContext } from 'features/todos/contexts/TodoContext';
-import { useNotification } from 'features/todos/contexts/NotificationContext';
-import { ACTIONS } from 'features/todos/model/actions';
+import { TodosContext } from '../contexts/TodoContext';
+import { useNotification } from '../contexts/NotificationContext';
+import { ACTIONS } from '../model/actions';
 import {
   ErrorType,
   Filter,
   FILTER,
   FILTER_LINKS,
-} from 'features/todos/model/types';
-import { FilterLink } from 'features/todos/ui/FilterLink';
-import { useFocus } from 'features/todos/contexts/FocusContext';
+} from '../model/types';
+import { FilterLink } from '../ui/FilterLink';
+import { useFocus } from '../contexts/FocusContext';
 
 export const TodoFilters: React.FC = () => {
   const { state, dispatch, handleDeleteTodo } = useContext(TodosContext);

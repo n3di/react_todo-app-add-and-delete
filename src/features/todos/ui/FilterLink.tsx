@@ -1,6 +1,6 @@
 import React from 'react';
 import cn from 'classnames';
-import { Filter } from 'features/todos/model/types';
+import { Filter } from '../model/types';
 
 export const FilterLink: React.FC<{
   filter: Filter;

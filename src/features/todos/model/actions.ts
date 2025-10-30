@@ -1,4 +1,4 @@
-import { Filter, Todo } from 'features/todos/model/types';
+import { Filter, Todo } from '../model/types';
 
 export const ACTIONS = {
   SET_TODOS: 'SET_TODOS',

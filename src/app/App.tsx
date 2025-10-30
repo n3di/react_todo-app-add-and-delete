@@ -8,7 +8,7 @@ import {
   NotificationProvider,
   TodosProvider,
   FocusProvider,
-} from 'features/todos';
+} from '../features/todos';
 
 export const AppBody: React.FC = () => {
   return (
